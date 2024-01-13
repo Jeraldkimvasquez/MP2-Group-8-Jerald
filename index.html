@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Existing head content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+  
+    <title>Restaurant POS SYSTEM</title>
+</head>
+<body>
+    <header  >
+        <h1>Restaurant POS SYSTEM</h1>
+    </header>
+
+    <!-- Add Bootstrap nav with tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="foods-tab" data-toggle="tab" href="#foods"><i class="bi bi-basket2-fill"></i> Foods</a>
+        </li>
+        <!-- Add more tabs as needed -->
+        <li class="nav-item">
+            <a class="nav-link" id="snacks-tab" data-toggle="tab" href="#snacks"><i class="bi bi-bookmark-plus-fill"></i> Snacks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="drinks-tab" data-toggle="tab" href="#drinks"> <i class="bi bi-cup-straw"></i> Drinks</a>
+        </li>
+    </ul>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- Add Bootstrap tab content -->
+            <div class="col-md-8">
+                <div class="tab-content">
+                    <div id="foods" class="tab-pane fade show active">
+                        <div class=" row  product-list">
+                  
+                            <a href="#" onclick="addToCart(20, 'rice', 'Rice', this)" class="col border border-light text-decoration-none text-center ">
+                                    <img class="text-center rounded-circle border border-white border-3" src="/image/rice.jpg" width="180px" height="180px">
+                                    <h2 class="text-info">Rice</h2>
+                                    <p class="text-muted">1 cup</p>
+                                    <p>Price: ₱ 20.00</p>
+                              </a> 
+
+                              <a href="#" onclick="addToCart(320, 'bulalo', 'Bulalo', this)" class="col border border-light text-decoration-none text-center ">
+                                <img class="text-center rounded-circle border border-white border-3" src="/image/bulalo.jpg" width="180px" height="180px">
+                                <h2 class="text-info">Bulalo</h2>
+                                <p class="text-muted">Marrow bones</p>
+                                <p>Price: ₱ 320.00</p>
+                          </a> 
+
+                          <a href="#" onclick="addToCart(220, 'sisig', 'Sisig', this)" class="col border border-light text-decoration-none text-center ">
+                            <img class="text-center rounded-circle border border-white border-3" src="/image/sisig.jpg" width="180px" height="180px">
+                            <h2 class="text-info">Sisig</h2>
+                            <p class="text-muted">Spicy Sisig</p>
+                            <p>Price: ₱ 220.00</p>
+                      </a> 
+
+                  <a href="#" onclick="addToCart(60, 'friedchicken', 'Friedchicken', this)" class="col border border-light text-decoration-none text-center ">
+                     <img class="text-center rounded-circle border border-white border-3" src="/image/friedchicken.jpg" width="180px" height="180px">
+                     <h2 class="text-info">Fried Chicken</h2>
+                      <p class="text-muted">Drum stick</p>
+                      <p>Price: ₱ 60.00</p>
+                  </a> 
+
+                  <a href="#" onclick="addToCart(270, 'sinigang', 'Sinigang', this)" class="col border border-light text-decoration-none text-center ">
+                    <img class="text-center rounded-circle border border-white border-3" src="/image/sinigang.jpg" width="180px" height="180px">
+                    <h2 class="text-info">Sinigang</h2>
+                    <p class="text-muted">Good for 2</p>
+                    <p>Price: ₱270.00</p>
+                  </a> 
+
+                  <a href="#" onclick="addToCart(170, 'friedfish', 'Friedfish', this)" class="col border border-light text-decoration-none text-center ">
+                    <img class="text-center rounded-circle border border-white border-3" src="/image/friedfish.jpg" width="180px" height="180px">
+                    <h2 class="text-info">Fried fish</h2>
+                    <p class="text-muted">1 Tilapia 100 gram</p>
+                    <p>Price: ₱170.00</p>
+                  </a> 
+
+                  <a href="#" onclick="addToCart(140, 'porkchop', 'Porkchop', this)" class="col border border-light text-decoration-none text-center ">
+                    <img class="text-center rounded-circle border border-white border-3" src="/image/porkchop.jpg" width="180px" height="180px">
+                    <h2 class="text-info">Pork chop</h2>
+                    <p class="text-muted">1 pork chop 150 gram</p>
+                    <p>Price: ₱140.00</p>
+                  </a> 
+                  
+                  <a href="#" onclick="addToCart(350, 'manok', 'Manok', this)" class="col border border-light text-decoration-none text-center ">
+                    <img class="text-center rounded-circle border border-white border-3" src="/image/manok.jpg" width="180px" height="180px">
+                    <h2 class="text-info">Lechon Manok</h2>
+                    <p class="text-muted">1 whole lechon manok</p>
+                    <p>Price: ₱350.00</p>
+                  </a> 
+
+
+                    </div>
+                       
+                    </div>
+                    <!-- Add more tab panes as needed -->
+                    <!-- Snacks Tab Pane -->
+            <div class="tab-pane fade" id="snacks"> 
+                <div class=" row  product-list">
+                  
+                    <a href="#" onclick="addToCart(120, 'fries', 'Fries', this)" class="col border border-light text-decoration-none text-center ">
+                            <img class="text-center rounded-circle border border-white border-3" src="/image/fries.jpg" width="180px" height="180px">
+                            <h2 class="text-info">Fries</h2>
+                            <p class="text-muted">200 gram</p>
+                            <p>Price: ₱ 120.00</p>
+                      </a> 
+                
+                      <a href="#" onclick="addToCart(100, 'burger', 'Burger', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/burger.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Burger</h2>
+                        <p class="text-muted">Ham with lettuce</p>
+                        <p>Price: ₱ 100.00</p> 
+                  </a> 
+
+                  <a href="#" onclick="addToCart(110, 'taco', 'Taco', this)" class="col border border-light text-decoration-none text-center">
+                    <img class="text-center rounded-circle border border-white border-3" src="/image/taco.jpg" width="180px" height="180px">
+                    <h2 class="text-info">Taco</h2>
+                    <p class="text-muted">Taco Cheese</p>
+                    <p>Price: ₱ 110.00</p> 
+              </a> 
+ 
+              <a href="#" onclick="addToCart(230, 'spaghetti', 'Spaghetti', this)" class="col border border-light text-decoration-none text-center">
+                <img class="text-center rounded-circle border border-white border-3" src="/image/spaghetti.jpg" width="180px" height="180px">
+                <h2 class="text-info">Spaghetti</h2>
+                <p class="text-muted">Itallian Spaghetti</p>
+                <p>Price: ₱ 230.00</p> 
+          </a> 
+
+          <a href="#" onclick="addToCart(140, 'milktea', 'Milktea', this)" class="col border border-light text-decoration-none text-center">
+            <img class="text-center rounded-circle border border-white border-3" src="/image/milktea.jpg" width="180px" height="180px">
+            <h2 class="text-info">Milktea</h2>
+            <p class="text-muted">8 oz</p>
+            <p>Price: ₱ 140.00</p> 
+      </a> 
+
+      <a href="#" onclick="addToCart(60, 'cake', 'Cake', this)" class="col border border-light text-decoration-none text-center">
+        <img class="text-center rounded-circle border border-white border-3" src="/image/cake.jpg" width="180px" height="180px">
+        <h2 class="text-info">Cake</h2>
+        <p class="text-muted">Milk Flavor</p>
+        <p>Price: ₱ 60.00</p> 
+  </a> 
+
+
+                 </div>
+                </div>
+             <!-- Drinks Tab Pane -->
+             <div class="tab-pane fade" id="drinks">
+               
+                <div class=" row  product-list"> 
+
+                    <a href="#" onclick="addToCart(50, 'sprite', 'Sprite', this)" class="col border border-light text-decoration-none text-center">
+                            <img class="text-center rounded-circle border border-white border-3" src="/image/sprite.jpg" width="180px" height="180px">
+                            <h2 class="text-info">Sprite</h2>
+                            <p class="text-muted">Can 500 ml</p>
+                            <p>Price: ₱ 50.00</p>
+                      </a>
+
+                      <a href="#" onclick="addToCart(35, 'coke', 'Coke', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/coke.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Coke</h2>
+                        <p class="text-muted">Can 330 ml</p>
+                        <p>Price: ₱ 35.00</p>
+                     </a>
+
+                     <a href="#" onclick="addToCart(40, 'pepsi', 'Pepsi', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/pepsi.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Pepsi</h2>
+                        <p class="text-muted">Can 500 ml</p>
+                        <p>Price: ₱ 40.00</p>
+                     </a> 
+
+                     <a href="#" onclick="addToCart(45, 'royal', 'Royal', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/royal.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Royal</h2>
+                        <p class="text-muted">Can 500 ml</p>
+                        <p>Price: ₱ 45.00</p>
+                     </a> 
+
+                     <a href="#" onclick="addToCart(50, 'fanta', 'Fanta', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/fanta.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Fanta</h2>
+                        <p class="text-muted">Can 330 ml</p>
+                        <p>Price: ₱ 50.00</p>
+                     </a> 
+
+                     <a href="#" onclick="addToCart(50, 'fanta', 'Fanta', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/fanta.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Fanta</h2>
+                        <p class="text-muted">Can 330 ml</p>
+                        <p>Price: ₱ 50.00</p>
+                     </a> 
+
+                     <a href="#" onclick="addToCart(50, 'fanta', 'Fanta', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/fanta.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Fanta</h2>
+                        <p class="text-muted">Can 330 ml</p>
+                        <p>Price: ₱ 50.00</p>
+                     </a> 
+
+                     <a href="#" onclick="addToCart(50, 'fanta', 'Fanta', this)" class="col border border-light text-decoration-none text-center">
+                        <img class="text-center rounded-circle border border-white border-3" src="/image/fanta.jpg" width="180px" height="180px">
+                        <h2 class="text-info">Fanta</h2>
+                        <p class="text-muted">Can 330 ml</p>
+                        <p>Price: ₱ 50.00</p>
+                     </a> 
+
+                    
+
+                    
+
+                      
+                    </div>
+                </div>
+            </div> 
+            </div>
+            
+            <!-- Fixed Cart Sidebar -->
+            <div  class="col-md-4 fixed-cart" >
+                <div class="cart-content "  >
+                    <h2>List of orders</h2>
+                    <ul class="list-group" id="cart-items" style="height: 350px; overflow-y: auto;">
+                        <!-- Cart items will be displayed here -->
+                    </ul>
+                    <div class="cart-total" ><h2 id="cart-total" class="text-success">Total: ₱0.00</h2></div> 
+                    <!-- Add a payment input field -->
+                    </br> 
+                    <div class="row">
+                    <label class="mt-2 ml-5" for="payment">Payment: ₱</label>
+                    <input class="form-control w-25" type="number" id="payment"> 
+                    <button type="button" class="btn btn-primary ml-2 " data-toggle="modal" data-target="#paymentmodal" onclick="processPayment()" ><i class="bi bi-cash-coin"></i> Payment</button>
+                    <!-- Add this div for displaying payment status -->
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+ 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="paymentmodal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" >Payment Message!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <div id="payment-status"></div>
+            <div id="change-notification"></div>
+        </div>
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Include your existing JavaScript file -->
+    <script src="shop.js"></script>
+    
+</body>
+</html>
