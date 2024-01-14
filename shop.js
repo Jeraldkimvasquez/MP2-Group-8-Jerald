@@ -129,7 +129,7 @@ function processPayment() {
         resetCart();
     } else { 
         paymentStatus.textContent = "Payment Error!";
-        changeNotification.textContent = "You inputed, Invalid Amount!";
+        changeNotification.textContent = "You input, Invalid Amount!";
        
     }
       
